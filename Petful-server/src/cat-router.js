@@ -1,14 +1,14 @@
 const express = require('express');
-const PetRouter = express.Router;
+const PetRouter = express.Router();
 const {cats} = require('./pets');
 
 PetRouter
     .route('/')
     .get((req, res) =>{
-        if(_cat === null){
-            res.status(404).send('error: no more cats');
+        if(cats.first === null){
+            return res.status(404).send('error: no more cats');
         } else {
-            res.json(cats.first);
+            return res.json(cats.first.value);
         }
     })
     .delete((req, res) =>{
