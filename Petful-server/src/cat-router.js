@@ -13,7 +13,7 @@ PetRouter
     })
     .delete((req, res) =>{
         cats.dequeue();
-        return res.status(204);
+        return res.status(204).json(cats.first);
     })
 
 
