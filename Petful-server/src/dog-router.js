@@ -1,6 +1,6 @@
 const express = require('express');
 const PetRouter = express.Router();
-const {dogs} = require('./pets');
+const {dogs, reloadDogs} = require('./pets');
 
 PetRouter
     .route('/')
@@ -13,6 +13,9 @@ PetRouter
     })
     .delete((req, res) =>{
         dogs.dequeue();
+        if(dogs.first === null){
+            reloadDogs();
+        }
         return res.status(204).json(dogs.first);
     })
 
