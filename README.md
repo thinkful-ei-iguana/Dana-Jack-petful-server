@@ -16,4 +16,4 @@ ie: GET /api/dog will return:
 
 Delete will remove that pet from the queue (and reload the queue for the purposes of not having to restart the server)
 
-This server uses express and cors.
+Technologies used: express, cors
