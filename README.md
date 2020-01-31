@@ -1,6 +1,7 @@
 This Server is for a FIFO pet adoption
 
-Team: Jack Pupel and Dana Nanosh
+Team: Jack Pupel - full-stack engineer
+        Dana Nanosh - full-stack engineer
 
 the only two endpoints are '/api/dog' and '/api/cat'
 These endpoints have a get/delete functionality. 
