@@ -8,7 +8,12 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./Petful-server/server.js"
+    "start": "node ./Petful-server/server.js",
+    "predeploy": "npm audit",
+    "deploy": "git push heroku master"
+  },
+  "engines": {
+    "node" : "12.11.1"
   },
   "dependencies": {
     "cors": "^2.8.5",
